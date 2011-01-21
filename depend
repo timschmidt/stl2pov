@@ -1,0 +1,4 @@
+license.o: license.c
+parse.o: parse.c macros.h parse.h utils.h
+stl2pov.o: stl2pov.c macros.h parse.h utils.h
+utils.o: utils.c macros.h utils.h

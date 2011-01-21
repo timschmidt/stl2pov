@@ -1,0 +1,118 @@
+commit 3337b7ef0cbcaa5e24ffd29688927452b1213657
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Mon Mar 30 21:41:23 2009 +0200
+
+    Import data from FreeBSD port
+
+commit 39287d2e8d8704077461bad28ab4138b5cd8be8e
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Mar 28 09:55:05 2009 +0100
+
+    Update copyright notices before creating the release.
+
+commit cfe842e2e2e267a3e86a2b418f6cc52aa07cf310
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Mar 28 09:48:25 2009 +0100
+
+    Release 2.4.3. Change reading of binary files.
+
+commit 07cd5a986e34856a5f0ee4eb2944133697ae7e3b
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Mon Mar 23 18:13:45 2009 +0100
+
+    Change docs from ps to pdf.
+
+commit 346a3e9c4b35c779b964f794b79bfbb00840fc1b
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Tue Nov 18 19:44:22 2008 +0100
+
+    Change structure alignment on win32.
+
+commit c8f69bb7d6f96cabe1516c63abbd063bca4cacb6
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Mon Nov 10 13:31:38 2008 +0100
+
+    Fix reading big binary files (metatron.stl) on windows.
+
+commit 857623dc5bd92545b391e07c8fbc24e1eae01def
+Author: Roland Smith <rsmith@rfs.erewhon.net>
+Date:   Thu Nov 6 09:27:34 2008 +0100
+
+    Start bugfix on windoze.
+
+commit 364e8b2261fea1c294fba1044e70e858e6b14f18
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Wed Feb 13 15:35:55 2008 +0100
+
+    Release 2.4.2.
+
+commit e96192486c4eb2bc154663ec97aad57059aafbc4
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Thu Jul 19 12:33:18 2007 +0200
+
+    Enhance status reporting; make it more frequent.
+    Label as release 2.4.1.
+
+commit 9cbd3ef4ac86a81b558bee5fc3edf4f3c4fa1c13
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Tue Jun 19 21:25:05 2007 +0200
+
+    Updated win makefile for 2.4.0.
+
+commit b915e143ff4123ab3448df2fec3d629a384d5a48
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Tue Jun 19 21:20:25 2007 +0200
+
+    Edits for release 2.4.0.
+
+commit 5532be8a8888b22afdaa396911d6cd7d4ab90ba0
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Tue Jun 19 00:31:44 2007 +0200
+
+    Made handling of binary files less fussy.
+    Updated copyright symbol and date in all source files.
+
+commit d51b76cf8f08207164206134a2b179d8faef7ccc
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Mon Jun 5 14:09:06 2006 +0200
+
+    Version 2.3.0; chase mesh syntax change in povray.
+
+commit ac090ad16084ebe6ceb3709515a45404945cfd00
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Apr 8 20:04:13 2006 +0200
+
+    Switched from svn to git for ChangeLog generation.
+
+commit ceed7c2a32f62d693e299a20c2817b501ffeb5e7
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Apr 8 19:29:11 2006 +0200
+
+    Prepare for release 2.2.1. Changed port/distinfo and win/Makefile 
+for release 2.2.1. Fix distinfo and pkg-list for FreeBSD port of 
+release 2.2.1. Merge port makefile fixes from committer.
+
+commit 2af59b14b95ae70a418b50e0a01133973b4b3c29
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Apr 8 19:27:06 2006 +0200
+
+    Version 2.2.0. Add port infrastructure for FreeBSD. Fixed Makefile 
+to mind PORTDOCS.
+
+commit 049648997711219e28d7f0cf1d2285bf05c9f2ee
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Apr 8 19:25:01 2006 +0200
+
+    Version 2.1.0.
+
+commit 187a552c501ddcf4b55283df08cfb3a16b352314
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Apr 8 19:22:11 2006 +0200
+
+    Version 2.0.0, with FreeBSD fixes applied.
+
+commit b5cb1eac0e426c8bbacb0ef6468c4fa6e5b28908
+Author: Roland Smith <rsmith@slackbox.xs4all.nl>
+Date:   Sat Apr 8 19:18:03 2006 +0200
+
+    Initial import of version 1.0.0.
