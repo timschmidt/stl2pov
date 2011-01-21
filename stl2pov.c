@@ -292,8 +292,13 @@ void print_mesh(struct stl_reader *r)
 	printf("} // end of mesh m_%s\n", r->name);
 
 	printf("  global_settings { ambient_light rgb<1, 1, 1> }\n");
+
+	largest_axis = (xyz_max[0] - xyz_min[0]);
+	if ((xyz_max[1] - xyz_min[1]) > largest_axis) { largest_axis = (xyz_max[1] - xyz_min[1]); }
+	if ((xyz_max[2] - xyz_min[2]) > largest_axis) { largest_axis = (xyz_max[2] - xyz_min[2]); }
+
 	printf("  camera {\n");
-	printf("    location <%g, %g, %g>\n", (double)xyz_max[0] * 1.5, (double)xyz_max[1] * 1.5,	(double)xyz_max[2] * 1.5);
+	printf("    location <%g, %g, %g>\n", (double)largest_axis * 1.5, (double)largest_axis * 1.5,	(double)largest_axis * 1.5);
 	printf("    look_at <%g, %g, %g>\n", ((double)xyz_max[0] - (double)xyz_min[0]) / 2 + (double)xyz_min[0], ((double)xyz_max[1] - (double)xyz_min[1]) / 2 + (double)xyz_min[1], ((double)xyz_max[2] - (double)xyz_min[2]) / 2 + (double)xyz_min[2]);
 	printf("  }\n");
 	printf("  light_source { <%g, %g, %g> color rgb<1, 1, 1> }\n", (double)xyz_max[0] * 1.5, (double)xyz_max[1] * 1.5,	(double)xyz_max[2] * 1.5);
