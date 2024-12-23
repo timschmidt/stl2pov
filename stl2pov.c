@@ -65,6 +65,12 @@ static size_t len = 0;*/
 
 struct stl_reader *pr = NULL;
 
+
+float xyz_max[3];
+float xyz_min[3];
+float largest_axis;
+
+
 int main(int argc, char *argv[])
 {
 	int smooth = 0;
@@ -255,7 +261,7 @@ void print_mesh(struct stl_reader *r)
 	int i, k;
 	double p;
 	/* Print the mesh itself. */
-	printf("mesh {\n", r->name);
+	printf("mesh {\n"); //, r->name);
 	for (i=0; i<r->nf; i++) {
 		printf("  triangle { // #%d\n", i+1);
 		k = r->f[i].vertex[0];

@@ -46,9 +46,9 @@ struct vertex {
 	int refcnt;		/* number of facets */
 };
 
-float xyz_max[3];
-float xyz_min[3];
-float largest_axis;
+extern float xyz_max[3];
+extern float xyz_min[3];
+extern float largest_axis;
 
 struct edge {
 	int vertex[2];
