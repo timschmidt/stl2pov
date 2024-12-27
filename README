@@ -1,5 +1,8 @@
 This is a terribly hacked version of stl2pov available here: http://www.xs4all.nl/~rsmith/software/#stl2pov
 
+
+![ ](sample.png)
+
 To use:
 
 stl2pov example.stl > example.pov
