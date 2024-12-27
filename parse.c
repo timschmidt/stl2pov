@@ -34,7 +34,7 @@
 #include <string.h>
 #include <time.h>
 /* If you don't want debugging and assertions, #define NDEBUG */
-/*#define NDEBUG*/
+/*#define NDEBUG*/ // defined on compile command line.
 /* If you don't want warning messages, #define QUIET */
 /*#define QUIET*/
 #include "macros.h"

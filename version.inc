@@ -1,3 +1,3 @@
 VMAJOR   = 2
-VMINOR   = 4
+VMINOR   = 5
 VPATCH   = 4
