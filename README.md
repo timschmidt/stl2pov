@@ -1,9 +1,16 @@
 This is a terribly hacked version of stl2pov available here: http://www.xs4all.nl/~rsmith/software/#stl2pov
 
+Adjustments by Rue Mohr.
+
+
+
 To use:
 
 stl2pov example.stl > example.pov
 povray +Iexample.pov +Oexample.png +D +P +W640 +H480 +A0.5
+
+
+![ ](sample.png)
 
 Original README follows:
 

@@ -65,6 +65,12 @@ static size_t len = 0;*/
 
 struct stl_reader *pr = NULL;
 
+
+float xyz_max[3];
+float xyz_min[3];
+float largest_axis;
+
+
 int main(int argc, char *argv[])
 {
 	int smooth = 0;
@@ -255,7 +261,7 @@ void print_mesh(struct stl_reader *r)
 	int i, k;
 	double p;
 	/* Print the mesh itself. */
-	printf("mesh {\n", r->name);
+	printf("mesh {\n"); //, r->name);
 	for (i=0; i<r->nf; i++) {
 		printf("  triangle { // #%d\n", i+1);
 		k = r->f[i].vertex[0];
@@ -284,8 +290,9 @@ void print_mesh(struct stl_reader *r)
 		fprintf(stderr, "\r%3.0f%% done", p);
 		fflush(stderr);
 	}
+      //  printf("      rotate <-90, 0, 0>\n");  // no screws up camera pointing...
 	printf("    texture {\n");
-	printf("      pigment { color rgb<0.9, 0.9, 0.9> }\n");
+	printf("      pigment { color rgb<0.1, 0.1, 1.0> }\n");
    printf("      finish { ambient 0.2 diffuse 0.7 }\n");
    printf(" }\n");
 
@@ -298,9 +305,14 @@ void print_mesh(struct stl_reader *r)
 	if ((xyz_max[2] - xyz_min[2]) > largest_axis) { largest_axis = (xyz_max[2] - xyz_min[2]); }
 
 	printf("  camera {\n");
-	printf("    location <%g, %g, %g>\n", (double)largest_axis * 1.5, (double)largest_axis * 1.5,	(double)largest_axis * 1.5);
+        //printf("    direction      <0, 0, 1>  \n");
+        printf("    sky    <0, 0, 1>  \n");
+	//printf("    location <%g, %g, %g>\n", (double)largest_axis * 1.2, (double)largest_axis * 1.2,	(double)largest_axis * 1.2);
+        printf("    location <%g, %g, %g>\n",  -(double)largest_axis * 1.2, ((double)xyz_max[1] - (double)xyz_min[1]) / 2 + (double)xyz_min[1],	(double)largest_axis * 1.2);
 	printf("    look_at <%g, %g, %g>\n", ((double)xyz_max[0] - (double)xyz_min[0]) / 2 + (double)xyz_min[0], ((double)xyz_max[1] - (double)xyz_min[1]) / 2 + (double)xyz_min[1], ((double)xyz_max[2] - (double)xyz_min[2]) / 2 + (double)xyz_min[2]);
 	printf("  }\n");
-	printf("  light_source { <%g, %g, %g> color rgb<1, 1, 1> }\n", (double)xyz_max[0] * 1.5, (double)xyz_max[1] * 1.5,	(double)xyz_max[2] * 1.5);
+        printf("  light_source { <%g, %g, %g> color rgb<1, 1, 1> }\n", -(double)largest_axis * 1.2, 0.0,	(double)largest_axis * 1.2 );
+	//printf("  light_source { <%g, %g, %g> color rgb<1, 1, 1> }\n", (double)xyz_max[0] * 1.5, (double)xyz_max[1] * 1.5,	(double)xyz_max[2] * 1.5);
+        printf("  background { color rgbt <1.0, 1.0, 1.0, 0.0> }\n");
 }
 /* EOF stl2pov.c */
